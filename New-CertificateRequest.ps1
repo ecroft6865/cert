@@ -33,7 +33,7 @@ function New-CertificateRequest {
         [ValidatePattern("CN=")]
         [string]$subject,
         [Parameter(Mandatory=$false, HelpMessage = "Please enter the SAN domains as a comma separated list")]
-        [string]$SANs,
+        [string[]]$SANs,
         [Parameter(Mandatory=$false, HelpMessage = "Please enter the Online Certificate Authority")]
         [string]$OnlineCA,
         [Parameter(Mandatory=$false, HelpMessage = "Please enter the Online Certificate Authority")]
