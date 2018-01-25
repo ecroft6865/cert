@@ -32,7 +32,7 @@ function New-CertificateRequest {
         [Parameter(ValueFromPipeline=$true, Mandatory=$true, HelpMessage = "Please enter the subject beginning with CN=")]
         [ValidatePattern("CN=")]
         [string]$subject,
-        [Parameter(Mandatory=$false, HelpMessage = "Please enter the SAN domains as a comma separated list")]
+        [Parameter(ValueFromPipeline=$true, Mandatory=$false, HelpMessage = "Please enter the SAN domains as a comma separated list")]
         [string[]]$SANs,
         [Parameter(Mandatory=$false, HelpMessage = "Please enter the Online Certificate Authority")]
         [string]$OnlineCA,
